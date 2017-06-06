@@ -1,4 +1,4 @@
- /******************************************************************* 
+/******************************************************************* 
  * EDIT: June 05, 2017
  * DESCRIPTION 
  * As part of an one-year project at Herman Hollerith Zentrum (HHZ),
@@ -31,10 +31,10 @@ char MY_SKETCH_VERSION[] = "1.0"; // Sketch version
 #include <MySensors.h>
 #include "MQ135.h"
 
-// Variable definitions
+// Define global variables
 MQ135 gasSensor = MQ135(A0); // Define 'A0' as input pin for data
 #define CHILD_ID 1   // Id of the sensor child
-unsigned long SLEEP_TIME = 300000; // 5 minutes sleep time between reports (in milliseconds)
+unsigned long SLEEP_TIME = 60000; // 1 minute sleep time between reports (in milliseconds)
 
 // Initialize airquality message
 MyMessage msg(CHILD_ID, V_LEVEL);
@@ -48,18 +48,18 @@ void setup() {
   // Else you can comment it for a faster start since the sensor is still calibrated correctly.
   
   // Let the sensor warm up for two minutes (required for getting accurate values)
-  //delay(120000);
+  delay(120000);
 
   // Calculate a calibration value (used for calibrating the sensor in MQ135.h by replacing the RZERO value)
   Serial.println("Sensor warm-up started");
 
   float calibrVal = 0;
-  float i = 5; // Set calibration duration to 3 minutes
+  float i = 5; // Set calibration duration to 5 minutes
   for(int x = (int) i; x > 0; x--){   
     Serial.print("Sensor warm-up in progress - ");
     Serial.print(x);
     Serial.println(" minute(s) left");
-    delay(10000);
+    delay(60000);
     calibrVal = calibrVal + gasSensor.getRZero(); // Cumulate the collected rzero values
   }
 
