@@ -71,7 +71,7 @@ char MY_SKETCH_VERSION[] = "1.0"; // Sketch version
 #include <Wire.h>
 
 #define CHILD_ID_LIGHT 0
-unsigned long SLEEP_TIME = 30000; // 30 seconds leep time between reads (in milliseconds)
+unsigned long SLEEP_TIME = 60000; // 1 minute leep time between reads (in milliseconds)
 
 BH1750 lightSensor;
 
@@ -80,10 +80,8 @@ BH1750 lightSensor;
 // transmitting LUX light level.
 MyMessage msg(CHILD_ID_LIGHT, V_LIGHT_LEVEL);
 // MyMessage msg(CHILD_ID_LIGHT, V_LEVEL);  
-uint16_t lastlux;
 
-void setup()  
-{ 
+void setup(){ 
   lightSensor.begin();
 }
 
@@ -96,10 +94,6 @@ void loop()
 {     
   uint16_t lux = lightSensor.readLightLevel(); // Get Lux value
   Serial.println(lux);
-  if (lux != lastlux) {
-      send(msg.set(lux));
-      lastlux = lux;
-  }
-
+  send(msg.set(lux)); 
   sleep(SLEEP_TIME);
 }
