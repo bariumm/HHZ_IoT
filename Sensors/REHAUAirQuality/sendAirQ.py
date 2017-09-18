@@ -13,7 +13,7 @@ mqttbroker = "192.168.0.12"
 channel = "hhz/125/4/1/1/0/1"
 
 # Define path of the airsensor-script and command to be executed
-dir = "/home/pi/Scripts/airsensor"
+dir = "/home/hhz/Scripts/airsensor"
 cmd = dir + " -v -o"
 
 # Execute airsensor-script to get air quality value
