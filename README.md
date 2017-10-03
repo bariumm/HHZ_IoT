@@ -11,4 +11,4 @@ The second part of the project is the development of a mobile app as a central t
 
 The aspired benefit is a stronger external representation of HHZ as a leading institution concerned with digitization and the Internet of Things. Also, the Digital HHZ is supposed to support both research projects and lectures at the institution.
 
-For further details, switch to our wiki and check out the rest of our documentation: 
+For further details, switch to our wiki and check out the rest of our documentation: https://github.com/Bariumm/HHZ_IoT/wiki.
