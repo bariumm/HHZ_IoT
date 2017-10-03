@@ -10,3 +10,5 @@ The second part of the project is the development of a mobile app as a central t
 ![HA App](https://github.com/Bariumm/HHZ_IoT/blob/master/Documentation/Pictures/Home/HomeAssistantApp.png)
 
 The aspired benefit is a stronger external representation of HHZ as a leading institution concerned with digitization and the Internet of Things. Also, the Digital HHZ is supposed to support both research projects and lectures at the institution.
+
+For further details, switch to our wiki and check out the rest of our documentation: 
