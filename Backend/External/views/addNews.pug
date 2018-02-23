@@ -1,0 +1,25 @@
+extends layout
+
+
+block content
+  h3 Add Digital HHZ News
+  br
+  .row
+      form(role='form', action="/addNews", method="post")
+          .form-group
+              input#auth.validate(name='auth', type='text', value=auth, hidden)
+              .row
+                  .input-field
+                      textarea#message.materialize-textarea(name='message', required)
+                      label(for='message') News text
+
+                  .input-field.col.s4
+                      input#url.validate(name='url', type='text', required)
+                      label.active(for='url') News URL
+              .row
+                  .col
+                      button.btn.btn-default.waves-effect(type='submit') Add news
+  script.
+    $(document).ready(function () {
+        $('#message').trigger('autoresize');
+    });

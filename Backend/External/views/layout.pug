@@ -1,0 +1,20 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    // Compiled and minified CSS
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css')
+    // Compiled and minified JavaScript
+    script(type='text/javascript', src='https://code.jquery.com/jquery-3.2.1.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js')
+    script.
+        $(document).ready(function () {
+            var message = document.getElementById('message').innerHTML
+            if (message != null) {
+                Materialize.toast(message, 4000);
+            }
+        });
+  body
+      #message(hidden='') #{message}
+  block content

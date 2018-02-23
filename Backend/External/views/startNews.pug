@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h3 Digital HHZ
+  br
+  .row
+      form(role='form', action="/news", method="post")
+          .row
+              .input-field.col.s4
+                  input#auth.validate(name='auth', type='text')
+                  label.active(for='auth') Authorization Key
+          .row
+              .col
+                  button.btn.btn-default.waves-effect(type='submit') News
