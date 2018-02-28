@@ -56,7 +56,7 @@ print("Successfully created the Home Assistant DB backup")
 # Upload the Home Assistant database backup to Dropbox
 print "3. Uploading the Home Assistant DB backup to Dropbox"
 
-access_token = 'WuaHcCL6RXMAAAAAAAAAbvBKI2e5scMa8Mp0V0npoBItoU8bUsdXBaDTY5uYfi-u'
+access_token = 'XXX'
 transferData = TransferData(access_token)
 
 file_from = backupName
