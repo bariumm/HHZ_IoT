@@ -60,7 +60,7 @@ access_token = 'XXX'
 transferData = TransferData(access_token)
 
 file_from = backupName
-file_to = '/Test/' + backupName  # The full path to upload the file to, including the file name
+file_to = '/DB_Backups/' + backupName  # The full path to upload the file to, including the file name
 
 file_size = os.path.getsize(file_from)
 chunk_size = 134217728
